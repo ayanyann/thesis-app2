@@ -10,6 +10,10 @@ import pyLDAvis
 import pyLDAvis.gensim_models as gensimvis
 from gensim.models import CoherenceModel
 import matplotlib.pyplot as plt
+import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
 
 def preprocess_text(text, preprocess_steps):
     if pd.isnull(text) or text.strip() == "":
