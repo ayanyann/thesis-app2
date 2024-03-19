@@ -11,9 +11,22 @@ import pyLDAvis.gensim_models as gensimvis
 from gensim.models import CoherenceModel
 import matplotlib.pyplot as plt
 import nltk
-nltk.download('stopwords')
-nltk.download('punkt')
-nltk.download('wordnet')
+
+def download_nltk_data():
+    nltk.download('stopwords')
+    nltk.download('punkt')
+    nltk.download('wordnet')
+    
+def download_nltk_data():
+    try:
+        nltk.data.find('stopwords')
+        nltk.data.find('punkt')
+        nltk.data.find('wordnet')
+    except LookupError:
+        nltk.download('stopwords')
+        nltk.download('punkt')
+        nltk.download('wordnet')
+
 
 def preprocess_text(text, preprocess_steps):
     if pd.isnull(text) or text.strip() == "":
@@ -176,4 +189,5 @@ def main():
         st.components.v1.html(html_string, width=1400, height=800)
 
 if __name__ == "__main__":
+    download_nltk_data()
     main()
