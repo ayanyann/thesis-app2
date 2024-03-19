@@ -11,3 +11,4 @@
 ### to run the app:
 - go to the folder and go to the terminal and type: streamlit run thesis.py
 
+
