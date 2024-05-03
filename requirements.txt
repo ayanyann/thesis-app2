@@ -1,6 +1,8 @@
-streamlit
 pandas
 nltk
 gensim
 pyLDAvis
 matplotlib
+wordcloud
+plotly
+networkx
